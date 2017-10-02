@@ -82,7 +82,7 @@ extern "C" int scanhash_neoscrypt(int thr_id, uint32_t *pdata,
 	{
 		cudaSetDevice(device_map[thr_id]);
 		//		cudaDeviceReset();
-		//		cudaSetDeviceFlags(cudaStreamNonBlocking);
+				cudaSetDeviceFlags(4);
 //		cudaSetDeviceFlags(cudaDeviceScheduleBlockingSync);
 		cudaDeviceSetCacheConfig(cudaFuncCachePreferL1);
 #if CUDART_VERSION >= 7000
